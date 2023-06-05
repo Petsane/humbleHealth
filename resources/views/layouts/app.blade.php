@@ -37,6 +37,13 @@
                 {{ $slot }}
             </main>
         </div>
+        <footer>
+            <div align="center">
+                <hr>
+                Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                <br>Developed by <a class="text-red-500" href="https://www.linkedin.com/in/tumelo-petsane-00b991134/">Tumelo</a>
+            </div>
+        </footer>
 
         @stack('modals')
 

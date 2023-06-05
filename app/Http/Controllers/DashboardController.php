@@ -12,16 +12,7 @@ class DashboardController extends Controller
     public function about(){
         return view('about');
     }
-    public function buy(){
-        return view('buy');
-    }
-    public function online(){
-        return view('online');
-    }
-    public function catalogue(){
-        return view('catalogue');
-    }
-    public function contact(){
-        return view('contact');
+    public function product(){
+        return view('product');
     }
 }

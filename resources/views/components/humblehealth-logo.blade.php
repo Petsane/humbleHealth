@@ -1,0 +1,1 @@
+<img src="https://www.logodesign.net/logo/mortar-amp-pestle-with-leaves-3472ld.png?nwm=1&nws=1&industry=homeopathy&sf=" width="100px"/>
