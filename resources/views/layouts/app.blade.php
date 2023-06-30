@@ -16,12 +16,20 @@
 
         <!-- Styles -->
         @livewireStyles
+        <style>
+            .footer{
+                background-color: rgb(17, 17, 78);
+                color: white;
+            }
+        </style>
     </head>
     <body class="font-sans antialiased">
         <x-banner />
 
         <div class="min-h-screen bg-gray-100">
-            @livewire('navigation-menu')
+            <div style="top:0;" class="fixed w-full">
+                @livewire('navigation-menu')
+            </div>
 
             <!-- Page Heading -->
             @if (isset($header))
@@ -37,10 +45,52 @@
                 {{ $slot }}
             </main>
         </div>
-        <footer>
+        <footer class="footer">
+            <div style="display: grid; grid-template-columns: 25% 25% 25% 25%; padding:50px; padding-left:300px;">
+                <div>
+                    <h4>heading for something</h4>
+                    <ul>
+                        <li><a href="">something</a></li>
+                        <li><a href="">something</a></li>
+                        <li><a href="">something</a></li>
+                        <li><a href="">something</a></li>
+                        <li><a href="">something</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>heading for thing</h4>
+                    <ul>
+                        <li><a href="">thing</a></li>
+                        <li><a href="">thing</a></li>
+                        <li><a href="">thing</a></li>
+                        <li><a href="">thing</a></li>
+                        <li><a href="">thing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>heading for that</h4>
+                    <ul>
+                        <li><a href="">that</a></li>
+                        <li><a href="">that</a></li>
+                        <li><a href="">that</a></li>
+                        <li><a href="">that</a></li>
+                        <li><a href="">that</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>heading for this</h4>
+                    <ul>
+                        <li><a href="">this</a></li>
+                        <li><a href="">this</a></li>
+                        <li><a href="">this</a></li>
+                        <li><a href="">this</a></li>
+                        <li><a href="">this</a></li>
+                    </ul>
+                </div>
+            </div>
             <div align="center">
                 <hr>
-                Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                Copyright &copy;<script>document.write(new Date().getFullYear());</script> Humble Remedies
                 <br>Developed by <a class="text-red-500" href="https://www.linkedin.com/in/tumelo-petsane-00b991134/">Tumelo</a>
             </div>
         </footer>
