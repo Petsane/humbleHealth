@@ -21,105 +21,31 @@
 
         <div class="prod-cont" style="display: grid; grid-template-columns: auto auto auto">
 
-            <div class="wrapper">
+            @foreach ( $products as $product)
+
+              <?php $name =$product['image'];?>
+
+              <div class="wrapper">
                 <div class="product-img">
-                  <img src="http://bit.ly/2tMBBTd" height="300" width="316">
+                  <img src="/product-images/{{ $name }}" height="300" width="316">
                 </div>
                 <div class="product-info">
                   <div class="product-text">
-                    <h1>Harvest Vase</h1>
-                    <h2>by studio and friends</h2>
+                    <h1>{{ $product['name'] }}</h1>
+                    <h2>by {{ $product['by'] }}</h2>
                     <p>
-                        Harvest Vases are a reinterpretation 
-                        of peeled fruits and vegetables as 
-                        functional objects. The surfaces 
-                        appear to be sliced and pulled aside, 
-                        allowing room for growth.
+                      {{ $product['description'] }}
                     </p>
                   </div>
                   <div class="product-price-btn" style="display: grid; grid-template-columns: 40% 60%">
-                    <div><p><span>R78</span></p></div>
+                    <div><p><span>R{{ $product['price'] }}</span></p></div>
                     <div><button type="button">buy now</button></div>
                   </div>
                 </div>
-            </div>
+              </div>
 
-            <div class="wrapper">
-                <div class="product-img">
-                  <img src="http://bit.ly/2tMBBTd">
-                </div>
-                <div class="product-info">
-                  <div class="product-text">
-                    <h1>Harvest Vase</h1>
-                    <h2>by studio and friends</h2>
-                    <p>
-                        Harvest Vases are a reinterpretation 
-                        of peeled fruits and vegetables as
-                        functional objects. The surfaces 
-                        appear to be sliced and pulled aside,
-                        allowing room for growth.
-                    </p>
-                  </div>
-                  <div class="product-price-btn" style="display: grid; grid-template-columns: 40% 60%">
-                    <div><p><span>R78</span></p></div>
-                    <div><button type="button">buy now</button></div>
-                  </div>
-                </div>
-            </div>
-
-            <div class="wrapper">
-                <div class="product-img">
-                  <img src="http://bit.ly/2tMBBTd">
-                </div>
-                <div class="product-info">
-                  <div class="product-text">
-                    <h1>Harvest Vase</h1>
-                    <h2>by studio and friends</h2>
-                    <p>
-                        Harvest Vases are a reinterpretation 
-                        of peeled fruits and vegetables as 
-                        functional objects. The surfaces 
-                        appear to be sliced and pulled aside, 
-                        allowing room for growth. 
-                    </p>
-                  </div>
-                  <div class="product-price-btn" style="display: grid; grid-template-columns: 40% 60%">
-                    <div><p><span>R78</span></p></div>
-                    <div><button type="button">buy now</button></div>
-                  </div>
-                </div>
-            </div>
-
-            <div class="wrapper">
-                <div class="product-img">
-                  <img src="http://bit.ly/2tMBBTd">
-                </div>
-                <div class="product-info">
-                  <div class="product-text">
-                    <h1>Harvest Vase</h1>
-
-                    <h2>by studio and friends</h2>
-
-                    <p>
-                        Harvest Vases are a reinterpretation 
-                        of peeled fruits and vegetables as 
-                        functional objects. The surfaces 
-                        appear to be sliced and pulled aside, 
-                        allowing room for growth.
-                    </p>
-
-                  </div>
-
-                  <div class="product-price-btn" style="display: grid; grid-template-columns: 40% 60%">
-
-                    <div><p><span>R78</span></p></div>
-
-                    <div><button type="button">buy now</button></div>
-
-                  </div>
-
-                </div>
-            </div>
+            @endforeach
+            
         </div>
         
     </div>

@@ -22,6 +22,9 @@
                 <x-nav-link href="{{ route('product') }}" :active="request()->routeIs('product')">
                     {{ __('Products') }}
                 </x-nav-link>
+                <x-nav-link href="{{ route('admin') }}" :active="request()->routeIs('admin')">
+                    {{ __('Administration') }}
+                </x-nav-link>
             </div>
             @guest
             <span class="inline-flex rounded-md">

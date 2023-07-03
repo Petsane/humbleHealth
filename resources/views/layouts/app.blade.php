@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>Humble Remedies</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -15,13 +15,25 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
         <!-- Styles -->
+        <script src="https://kit.fontawesome.com/f75ab26951.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+        <link
+            href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+            rel="stylesheet"
+        >
         @livewireStyles
+
         <style>
             .footer{
                 background-color: rgb(17, 17, 78);
                 color: white;
             }
         </style>
+        
+        <script src="{{ asset('js/jquery.slim.min.js') }}"></script>
+        <script src="{{ asset('js/popper.min.js') }}"></script>
+        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+
     </head>
     <body class="font-sans antialiased">
         <x-banner />
@@ -41,7 +53,7 @@
             @endif
 
             <!-- Page Content -->
-            <main>
+            <main style="margin-top: 60px">
                 {{ $slot }}
             </main>
         </div>
@@ -89,7 +101,7 @@
                 </div>
             </div>
             <div align="center">
-                <hr>
+                <x-section-border/>
                 Copyright &copy;<script>document.write(new Date().getFullYear());</script> Humble Remedies
                 <br>Developed by <a class="text-red-500" href="https://www.linkedin.com/in/tumelo-petsane-00b991134/">Tumelo</a>
             </div>

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,9 @@ use App\Http\Controllers\DashboardController;
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 Route::get('/about', [DashboardController::class, 'about'])->name('about');
 Route::get('/product', [DashboardController::class, 'product'])->name('product');
+
+Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+Route::get('/new-product', [AdminController::class, 'newProduct'])->name('new-product');
+Route::post('/upload-product', [AdminController::class, 'uploadProduct'])->name('upload-product');
+Route::post('/update-product', [AdminController::class, 'updateProduct'])->name('updateProduct');
+Route::post('/delete-product', [AdminController::class, 'destroy'])->name('delete');
